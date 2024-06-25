@@ -1,29 +1,314 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex" />
-<title>GitHub練習用</title>
-    <style>
-        div{
-            width:100px;
-            height: 100px;
-            text-align: center;
-            font-size: 16px;
-            line-height: 100px;
-        }
-        .box1{
-            background: orange;
-        }
-        .box2{
-            background: green;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>mf's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
-    <h1>GitHub練習</h1>
-    <div class="box1">box1</div>
-    <div class="box2">box2</div>
+  <div id="first-view">
+    <div class="first-view-text"><span>mf's</span> Portfolio</div>
+  </div>
+  <div class="bg">
+    <header>
+      <nav>
+        <ul class="header-nav">
+          <li><a href="#works">Works</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <div class="hero">
+            <h1>
+              <span>mf's</span><br>
+              Portfolio
+            </h1>
+          </div>
+          <section id="works">
+            <h2>Works</h2>
+            <div class="works work1">
+              <h3 class="work-number"><img src="images/work-title01.png" alt="制作物1" width="169"></h3>
+              <div class="works-inner">
+                <table class="works-table">
+                  <tr>
+                    <th>概要</th>
+                    <td class="td-first">
+                      <ul class="table-ul">
+                        <li>プログラミング勉強会　256times課題</li>
+                        <li>給食ぱん屋</li>
+                        <li>架空の案件を題材に、提供画像素材と仕様をもとに自由にデザイン、HTML、CSSの実装</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作時間</th>
+                    <td>4日間</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール</th>
+                    <td>VS Code</td>
+                  </tr>
+                  <tr>
+                    <th>制作のポイント</th>
+                    <td>JS、アニメーション、aos など、色々なやり方で動きをつけました。</td>
+                  </tr>
+                </table>
+                <div class="work-img">
+                  <img src="images/work1.jpg" alt="制作物1" width="160">
+                  <a href="kyusyokupanya/index.html" target="_blank">
+                    <p id="js-more1" class="more">ぜひ見て下さい！</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="works work2">
+              <h3 class="work-number"><img src="images/work-title02.png" alt="制作物2" width="169"></h3>
+              <div class="works-inner">
+                <table class="works-table">
+                  <tr>
+                    <th>概要</th>
+                    <td class="td-first">
+                      <ul class="table-ul">
+                        <li>プログラミング勉強会　256times課題</li>
+                        <li>メディアサイト ニゴロニュース</li>
+                        <li>架空の案件を題材に、提供画像素材と仕様をもとに自由にデザイン、HTML、CSSの実装</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作時間</th>
+                    <td>4日間</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール</th>
+                    <td>VS Code</td>
+                  </tr>
+                  <tr>
+                    <th>制作のポイント</th>
+                    <td>「メディアサイト」のイメージがなかなかつかめず、苦労しました。<br>スッキリ読みやすくを心掛けました。<br>
+                      「余白について考える」のところだけ、下層ページがあります。</td>
+                  </tr>
+                </table>
+                <div class="work-img">
+                  <img src="images/work2.jpg" alt="制作物2" width="160">
+                  <a href="nigoro-times/index.html" target="_blank">
+                    <p id="js-more2" class="more">どうか見て下さい</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="works work3">
+              <h3 class="work-number"><img src="images/work-title03.png" alt="制作物3" width="169"></h3>
+              <div class="works-inner">
+                <table class="works-table">
+                  <tr>
+                    <th>概要</th>
+                    <td class="td-first">
+                      <ul class="table-ul">
+                        <li>プログラミング勉強会　256times課題</li>
+                        <li>おすもうFlowers</li>
+                        <li>架空の案件を題材に、FVのみデザインカンプあり。<br>提供画像素材と仕様をもとに自由にデザイン、HTML、CSSの実装</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作時間</th>
+                    <td>4日間</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール</th>
+                    <td>VS Code</td>
+                  </tr>
+                  <tr>
+                    <th>制作のポイント</th>
+                    <td>FVのイメージに合わせて色を考えましたが、サービスセクションの背景色など、色に非常に悩みました。</td>
+                  </tr>
+                </table>
+                <div class="work-img">
+                  <img src="images/work3.jpg" alt="制作物3" width="160">
+                  <a href="osumouflowers/index.html" target="_blank">
+                    <p id="js-more3" class="more">please take a look</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="works work4">
+              <h3 class="work-number"><img src="images/work-title04.png" alt="制作物4" width="169"></h3>
+              <div class="works-inner">
+                <table class="works-table">
+                  <tr>
+                    <th>概要</th>
+                    <td class="td-first">
+                      <ul class="table-ul">
+                        <li>
+                          このポートフォリオサイトです！<br>
+                          当サイトも自ら制作していますので実績の一つとして御覧ください。
+                        </li>
+                        <li>mf's Portfolio</li>
+                        <li>デザイン、HTML、CSS、jsの実装</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作時間</th>
+                    <td>7日間</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール</th>
+                    <td>DreamWeaver , Figma , PhotoShop</td>
+                  </tr>
+                  <tr>
+                    <th>制作のポイント</th>
+                    <td>掲載できるものが少ないので、デザインに非常に悩みました。<br>背景がゆっくり変化したり、 hover を工夫しました。</td>
+                  </tr>
+                </table>
+                <div class="work-img">
+                  <img src="images/work4.jpg" alt="制作物4" width="160">
+
+                  <p id="js-more4" class="more">このページです！</p>
+                </div>
+              </div>
+            </div>
+            <div class="works work5">
+              <h3 class="work-number work-number-orange"><img src="images/work-title05.png" alt="制作物5" width="169"></h3>
+              <div class="works-inner">
+                <table class="works-table">
+                  <tr>
+                    <th>概要</th>
+                    <td class="td-first">
+                      <ul class="table-ul">
+                        <li>オンラインスクール デイトラ　デザイン課題</li>
+                        <li>おむすび屋</li>
+                        <li>架空の案件を題材に、デザイン</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作時間</th>
+                    <td>7日間</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール</th>
+                    <td>Figma</td>
+                  </tr>
+                  <tr>
+                    <th>制作のポイント</th>
+                    <td>おむすび屋さんという事で和風なイメージですが、渋くなりすぎないように赤を使って華やかさも出して作りました。</td>
+                  </tr>
+                </table>
+                <div class="work-img">
+                  <img src="images/design1.jpg" alt="制作物5" width="160">
+                  <a href="images/Frame1.jpg" target="_blank">
+                    <p id="js-more5" class="more">ご覧ください！</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about">
+            <h2>About</h2>
+            <h3 class="skill-title">Tool 等 使用経験</h3>
+            <div class="skill-table">
+              <table class="skill-table1">
+                <tr>
+                  <th>Windows</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>Mac</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>VS-code</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-half"></i></td>
+                </tr>
+                <tr>
+                  <th>DreamWeaver</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-half"></i></td>
+                </tr>
+                <tr>
+                  <th>figma</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>PhotoShop</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></td>
+                </tr>
+                <tr>
+                  <th>Illustrator</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i></td>
+                </tr>
+              </table>
+
+              <table class="skill-table2">
+                <tr>
+                  <th>HTML</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>CSS</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-half"></i></td>
+                </tr>
+                <tr>
+                  <th>Sass（SCSS）</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>Javascript</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></td>
+                </tr>
+                <tr>
+                  <th>WordPress</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>Excel</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i></td>
+                </tr>
+                <tr>
+                  <th>Word</th>
+                  <td class="skill-td"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-half"></i></td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <footer><small>(c) mf</small></footer>
+  </div>
+
+  <a href="#" class="to-top" data-aos="fade-up" data-aos-anchor="#about" data-aos-offset="0"><i
+      class="bi bi-chevron-bar-up"></i></a>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
