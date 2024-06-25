@@ -1,0 +1,397 @@
+@charset "utf-8";
+
+/*共通*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*大外*/
+.container {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+/*header*/
+header {
+  height: 80px;
+  background: #333;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 0;
+}
+
+header img {
+  width: 150px;
+  margin: 25px 150px 25px 20px;
+}
+
+header ul {
+  display: none;
+}
+
+/*ハンバーガーメニュー*/
+.sp-menu {
+  margin: 0 40px 0 auto;
+}
+
+.sp-menu #open {
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.bi-list {
+  color: white;
+  font-size: 32px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+}
+
+.overlay a {
+  color: #333;
+}
+
+/*メインビジュアル*/
+.main-v {
+  height: 320px;
+  background-image: url("https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4334/602cab9a823ee99edd06b43d3489f6c48248fc84.jpg");
+  background-size: cover;
+}
+
+.main-v-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.main-v p {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+/*main記事 左*/
+article {
+  min-width: 232px;
+  width: calc(100% - 16px);
+  margin: 40px auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+article a:hover {
+  opacity: 0.8;
+}
+
+.image img {
+  width: 100%;
+}
+
+.top-h2 {
+  margin: 20px 0;
+  min-height: 70px;
+  /*高さを揃えるため*/
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+p {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.text {
+  min-height: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.text p {
+  margin: 0;
+  /*高さを揃えるため*/
+}
+
+.post {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.post-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post p {
+  margin: 0;
+}
+
+.post time,
+.poster {
+  color: #555;
+  font-size: 12px;
+}
+
+.poster {
+  width: 40px;
+}
+
+/*main記事 右*/
+.inner-right {
+  padding: 0 24px;
+}
+
+/*記事リスト*/
+.list_posts {
+  padding-bottom: 40px;
+}
+
+.list_posts .top-h2 {
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.list_posts ul {
+  margin: 32px auto 0;
+}
+
+.list_posts time {
+  color: #555;
+  font-size: 14px;
+}
+
+.list_posts p {
+  margin-top: 0;
+}
+
+.list_posts li a:hover {
+  opacity: 0.8;
+}
+
+/*広告*/
+.add {
+  display: none;
+}
+
+.add-sp {
+  text-align: center;
+}
+
+.add-sp img {
+  margin-top: 16px;
+}
+
+/*footer*/
+footer {
+  height: 80px;
+  background: #333;
+  text-align: center;
+}
+
+small {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: 80px;
+}
+
+/* ====== 記事ページ ======*/
+.report-h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.contents_list {
+  margin: 24px 0;
+  padding: 16px 24px;
+  background: #eee;
+}
+
+.report-h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.report-ol li {
+  padding: 4px;
+}
+
+.report-ol a {
+  color: #333;
+}
+
+.report-ol a:hover {
+  color: #000;
+}
+
+.report-section {
+  padding: 16px 24px;
+}
+
+.report-section .report-h3 {
+  border-bottom: 4px solid #eee;
+}
+
+.report-img {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/*戻るボタン*/
+.page_top {
+  width: 100px;
+  margin: 40px 0 0 auto;
+  color: #333;
+  display: block;
+}
+
+.bi-arrow-up-square {
+  font-size: 40px;
+  color: gray
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+  }
+
+  /*headerのリスト*/
+  .sp-menu {
+    display: none;
+  }
+
+  header ul {
+    margin: 0 40px 0 auto;
+    color: white;
+    display: flex;
+  }
+
+  header li {
+    padding: 8px 16px;
+    border: 1px solid #333;
+  }
+
+  header li:hover {
+    border: 1px solid white;
+  }
+
+  header a {
+    color: white;
+  }
+
+  /*main記事 左*/
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 3;
+  }
+
+  article {
+    width: calc((100% - 16px) / 3);
+    margin: 0;
+  }
+
+  /*main記事 右*/
+  .inner-right {
+    flex: 1;
+    order: 1;
+  }
+
+  .list_posts .top-h2 {
+    padding-top: 0;
+  }
+
+  .list_posts li p {
+    font-size: 15px;
+  }
+
+  .add {
+    display: block;
+    text-align: center;
+  }
+
+  .add-sp {
+    display: none;
+  }
+}

@@ -1,0 +1,478 @@
+@charset "utf-8";
+
+/*共通*/
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #3b4b5a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto sans jp", Meiryo, sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+}
+
+section {
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 24px;
+  color: var(--main-color);
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 64px auto;
+  width: calc(100% - 32px);
+}
+
+/*ヘッダー*/
+header {
+  background: var(--main-color);
+}
+
+.header-inner {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px;
+}
+
+.logo-pc {
+  display: none;
+}
+
+h1 {
+  font-size: 0;
+}
+
+.header-nav {
+  display: none;
+}
+
+.header-button {
+  font-size: 40px;
+  color: #fff;
+}
+
+/*ハンバーガーメニュー*/
+.header-button #open {
+  cursor: pointer;
+}
+
+.header-button #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  z-index: 100;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay a {
+  color: #333;
+  margin-top: 24px;
+  display: block;
+}
+
+/*ヒーローエリア*/
+.hero {
+  height: 488px;
+  background-image: url("https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/101/4311/af880fc03d0175ac6ec908ba4f05cab9769dbdcc.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+}
+
+.hero-text {
+  padding: 10px 20px;
+  color: #fff;
+  background: rgba(59, 75, 90, 0.7);
+  position: absolute;
+  top: 177px;
+  left: 20px;
+}
+
+.hero h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.hero h2 span {
+  font-family: "Noto Serif JP", serif;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+/*コンセプト*/
+#concept h3 {
+  padding-left: 8px;
+  font-size: 24px;
+  font-weight: normal;
+  border-left: 4px solid var(--main-color);
+}
+
+.concept-flex {
+  padding: 56px 32px;
+  display: block;
+}
+
+.concept-text {
+  padding: 0 40px 32px;
+  flex: 1;
+  text-align: left;
+}
+
+.concept-text p {
+  margin-top: 16px;
+  line-height: 1.8;
+}
+
+.concept-img {
+  flex: 1;
+}
+
+.concept-img img {
+  width: 100%;
+  border: 1px solid #fff;
+  box-shadow: 24px 24px rgba(59, 75, 90, 0.7)
+    /*#75818b*/
+  ;
+}
+
+/*サービス*/
+#services {
+  padding: 40px 0;
+  background: #f9f9f0;
+}
+
+.services-flex {
+  display: block;
+}
+
+.service-flex-box {
+  padding: 40px 24px;
+}
+
+.service-img img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.service-text {
+  min-height: 300px;
+  padding: 16px 24px 24px;
+  background: #fff;
+}
+
+#services h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.service-flex-box p {
+  margin-top: 16px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/*ギャラリー*/
+.gallery-grid {
+  grid-template-columns: 1fr;
+  /* 1列のグリッド */
+}
+
+/*フッター*/
+footer {
+  padding: 60px 36px 40px;
+  background: #f4f3df;
+  text-align: center;
+}
+
+.footer-left img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.footer-table {
+  width: 280px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+
+.footer-table th {
+  width: 120px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.footer-icon-box {
+  margin-top: 60px;
+}
+
+.footer-icon-box a {
+  padding: 0 32px;
+  display: inline-block;
+}
+
+.footer-icon-box a {
+  flex: 1;
+}
+
+.footer-icon-box .bi {
+  font-size: 32px;
+}
+
+footer small {
+  margin-top: 40px;
+  font-size: 12px;
+  display: block;
+}
+
+.bi-instagram {
+  color: #e7973a;
+}
+
+.bi-twitter {
+  color: #1da1f2;
+}
+
+.bi-facebook {
+  color: #1877f2;
+}
+
+/*戻るボタン*/
+.page_top {
+  width: 100px;
+  margin: 40px 0 0 auto;
+  display: block;
+}
+
+.bi-flower3 {
+  font-size: 72px;
+  color: var(--main-color);
+}
+
+@media (min-width: 768px) {
+
+  /*PC共通*/
+  section h2 {
+    font-size: 40px;
+  }
+
+  /*PCヘッダー*/
+  .logo-sp {
+    display: none;
+  }
+
+  .logo-pc {
+    display: block;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 32px;
+  }
+
+  .header-nav a {
+    padding: 10px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+  }
+
+  .header-nav a:hover {
+    padding: 10px;
+    background: #75818b;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  /*PCヒーローエリア*/
+  .hero {
+    height: 712px;
+    background-position: center center;
+  }
+
+  .hero-text {
+    margin-left: 100px;
+  }
+
+  .hero h2 {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 80px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+
+  /*PCコンセプト*/
+  .concept-flex {
+    display: flex;
+    gap: 32px;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .reverse img {
+    box-shadow: -24px 24px rgba(59, 75, 90, 0.7)
+      /*#3b4b5a*/
+    ;
+  }
+
+  /*PCサービス*/
+  .services-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-flex-box {
+    width: calc((100% - 32px) / 2);
+  }
+
+  /*PCギャラリー*/
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    grid-template-areas:
+      "p p p o o"
+      "p p p o o"
+      "g g b r r"
+      "g g s r r";
+  }
+
+  .grid-box {
+    border: 1px solid #fff;
+  }
+
+  .grid-box img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  .grid-box1 {
+    background-image: url("https://256times-upload-files.s3.ap-northeast-1.amazonaws.com/production/702833/4321/141cafa1c82ab33cf8bcf4f2be49fac06baee88f.jpg");
+    grid-area: p;
+    background-position: center center;
+  }
+
+  .grid-box2 {
+    background: orange;
+    grid-area: o;
+  }
+
+  .grid-box3 {
+    background: green;
+    grid-area: g;
+  }
+
+  .grid-box4 {
+    background: blue;
+    grid-area: b;
+  }
+
+  .grid-box5 {
+    background: silver;
+    grid-area: s;
+  }
+
+  .grid-box6 {
+    background: red;
+    grid-area: r;
+  }
+
+  /*PCフッター*/
+  .footer-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-right {
+    flex: 1;
+  }
+
+  .footer-table {
+    margin-top: 0;
+  }
+
+  .footer-icon-box .bi {
+    font-size: 40px;
+  }
+
+  footer small {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,570 @@
+@charset "utf-8";
+
+/*共通*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #583822;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+}
+
+.section-title {
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.section-title span {
+  font-size: 16px;
+  display: block;
+}
+
+/*ヘッダーsp*/
+header {
+  height: 100px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 0;
+}
+
+.logo-sp img {
+  filter: saturate(50%);
+}
+
+.logo-pc {
+  display: none;
+}
+
+.sp-nav_list {
+  display: inline-block;
+}
+
+.PC-nav_list {
+  display: none;
+}
+
+/*ハンバーガーメニュー*/
+.sp-nav_list #open {
+  cursor: pointer;
+}
+
+.sp-nav_list #open.hide {
+  display: none;
+}
+
+.bi-list {
+  font-size: 64px;
+  color: var(--main-color);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 10px;
+  right: 32px;
+  font-size: 64px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+}
+
+/*heroエリアsp*/
+.hero {
+  display: block;
+  background-image: url("../img/hero2000half.jpg");
+  background-size: cover;
+  background-position: center right;
+}
+
+.hero-left {
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-left p {
+  color: #fff;
+}
+
+.hero-left-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.whisk {
+  animation: move 0.8s;
+}
+
+@keyframes move {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/*給食ぱん屋のこだわりsp*/
+.about {
+  margin-top: 80px;
+}
+
+.about p {
+  margin-top: 32px;
+  line-height: 1.8;
+}
+
+.about-left {
+  padding: 16px 24px;
+}
+
+.about-right {
+  margin-top: 32px;
+  padding: 16px 24px;
+  border-top: 1px dotted var(--main-color);
+}
+
+/* images-pc_sp*/
+.concept-images_wrapper {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.concept-images_list {
+  display: flex;
+  padding: 0;
+  margin-top: 0px;
+  width: 320%;
+  animation-name: conceptScroll;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes conceptScroll {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+
+.concept-images_list {
+  flex: 1;
+}
+
+.concept-images_image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/*自己紹介sp*/
+.self-introduction {
+  margin-top: 80px;
+  padding: 24px 40px;
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  box-shadow: 0 0 8px #ccc;
+}
+
+.self-introduction_text {
+  order: 2;
+  line-height: 1.8;
+}
+
+.self-introduction_text h3 {
+  font-size: 24px;
+  border-bottom: 8px solid var(--main-color);
+}
+
+.self-introduction_text h3+p {
+  font-size: 20px;
+}
+
+.self-introduction_text p+p {
+  margin-top: 32px;
+}
+
+.self-introduction_img {
+  margin-top: 40px;
+  text-align: center;
+  order: 1;
+}
+
+.self-introduction_img img {
+  width: 50%;
+}
+
+/*menu-sp*/
+#menu {
+  margin-top: 200px;
+}
+
+.menu-box {
+  margin: 32px auto 0;
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(88, 56, 34, 0.9);
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 48px);
+}
+
+.menu-text h3 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.price {
+  color: #fff;
+}
+
+.menu-box p+p {
+  margin-top: 32px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.menu-img {
+  margin-top: auto;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.menu-img img {
+  width: 100%;
+}
+
+/*お知らせsp*/
+#news {
+  margin-top: 160px;
+}
+
+.news-list li time {
+  width: 120px;
+}
+
+.news-list-flex {
+  display: flex;
+}
+
+.news-list li {
+  padding: 20px 0;
+}
+
+.news-list li:first-child {
+  border-top: 1px dotted var(--main-color);
+  border-bottom: 1px dotted var(--main-color);
+}
+
+.news-list li+li {
+  border-bottom: 1px dotted var(--main-color);
+}
+
+.label {
+  min-width: 120px;
+  border-radius: 8px;
+  margin: 0 20px 0 0;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.label_1 {
+  background: rgb(250, 189, 75);
+}
+
+.label_2 {
+  background: rgb(251, 169, 152);
+}
+
+.label_3 {
+  background: rgb(252, 240, 167);
+}
+
+.news-link {
+  margin-left: auto;
+  padding: 0 32px;
+}
+
+.news-link:hover {
+  color: #dbd2cc;
+}
+
+.news-list_button {
+  display: block;
+  width: 200px;
+  margin: 40px auto;
+  padding: 8px;
+  border-radius: 16px;
+  border: 2px solid var(--main-color);
+  text-align: center;
+}
+
+.news-list_button:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/*店舗情報sp*/
+#store {
+  margin-top: 160px;
+}
+
+.store-info {
+  width: 100%;
+}
+
+tr,
+th,
+td {
+  text-align: left;
+  border-bottom: 1px dotted var(--main-color);
+}
+
+td {
+  padding: 16px;
+}
+
+.store-right img {
+  min-width: 100%;
+}
+
+/*お問い合わせsp*/
+#contact {
+  margin-top: 160px;
+}
+
+.form {
+  margin: 40px auto;
+  /* border: 1px solid var(--main-color); */
+  border-radius: 8px;
+  background: #dbd2cc;
+}
+
+.form-inner {
+  padding: 64px;
+}
+
+.form-field {
+  display: block;
+  padding: 16px 24px;
+}
+
+.form-field_title {
+  width: 140px;
+}
+
+.input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--main-color);
+  flex: auto;
+}
+
+.form-button {
+  all: unset;
+  width: 160px;
+  height: 32px;
+  border: 3px solid var(--main-color);
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 40px auto;
+  display: block;
+}
+
+.form-button:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/*フッターsp*/
+footer {
+  height: 100px;
+  background: var(--main-color);
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+
+/*********PC表示*********/
+@media (min-width: 768px) {
+
+  /*ヘッダーPC*/
+  .logo-sp {
+    display: none;
+  }
+
+  .logo-pc {
+    display: block;
+  }
+
+  .sp-nav_list {
+    display: none;
+  }
+
+  .PC-nav_list {
+    display: inline-block;
+  }
+
+  .PC-nav_list li {
+    display: inline-block;
+    padding-right: 16px;
+  }
+
+  .PC-nav_list li a {
+    width: 100px;
+    display: block;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  .PC-nav_list li a:hover {
+    border: 1px solid rgba(88, 56, 34, 0.9);
+    border-radius: 16px;
+  }
+
+  /*heroエリアPC*/
+  .hero {
+    display: flex;
+    height: 600px;
+    background-position: center right;
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+  }
+
+  .hero-left {
+    flex: 1;
+    background: rgba(88, 56, 34, 0.9);
+  }
+
+  .hero-right {
+    flex: 3;
+  }
+
+  /*給食ぱん屋のこだわりPC*/
+  .about {
+    display: flex;
+  }
+
+  .about-left {
+    flex: 1;
+  }
+
+  .about-right {
+    border-top: 0px;
+    border-left: 1px dotted var(--main-color);
+    flex: 1;
+  }
+
+  /*自己紹介pc*/
+  .self-introduction {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /*menu-pc*/
+  #menu {
+    background: linear-gradient(180deg, transparent 0%, transparent 50%, rgb(169, 123, 91) 50%, rgb(169, 123, 91) 100%);
+  }
+
+  .menu-inner {
+    max-width: 1000px;
+    margin: 32px auto;
+    display: flex;
+    gap: 24px;
+  }
+
+  .menu-box {
+    width: calc((100% - 64px) / 3);
+  }
+
+  /*お知らせpc*/
+  .news-list li {
+    display: flex;
+    padding: 16px;
+  }
+
+  /*店舗情報-pc*/
+
+  .store-inner {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+  }
+}

@@ -1,0 +1,330 @@
+/*共通*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #333;
+  --accent-color: #db3d33;
+  --hover_before-color: #f35b52;
+  --accent-font: "Josefin Sans";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+ul {
+  /* list-style: none; */
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1000px;
+  width: calc(100% - 64px);
+  margin: 0 auto;
+  background: #fff;
+}
+
+.container {
+  /*padding: 56px;*/
+  width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 160px;
+}
+
+th {
+  width: 160px;
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  padding: 16px 0;
+}
+
+/*背景*/
+.bg {
+  animation: bg-color 16s infinite;
+}
+
+@keyframes bg-color {
+  0% {
+    background-color: #fff;
+    background-image: radial-gradient(#feecd2 20%, transparent 20%), radial-gradient(#feecd2 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  50% {
+    background-color: #fff;
+    background-image: radial-gradient(#eee 20%, transparent 20%), radial-gradient(#eee 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  100% {
+    background-color: #fff;
+    background-image: radial-gradient(#feecd2 20%, transparent 20%), radial-gradient(#feecd2 20%, transparent 20%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+/*最初画面*/
+#first-view {
+  width: 100vw;
+  height: 100vh;
+  transition: all 3s;
+  background-color: var(--accent-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.first-view-text {
+  padding: 48px;
+  color: #fff;
+  font-size:
+    /*320px*/
+    22vw;
+  font-weight: 100;
+  font-family: var(--accent-font);
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*header*/
+header {
+  padding: 24px;
+  background: #fff;
+  /* border-bottom: 1px solid pink; */
+}
+
+.header-nav {
+  text-align: right;
+}
+
+.header-nav li {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+/*hero*/
+.hero {
+  padding: 32px 4px;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 4px double var(--text-color);
+}
+
+h1 {
+  width: 200px;
+  margin: 0 auto;
+  font-family: var(--accent-font);
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: var(--accent-color);
+  font-size: 40px;
+}
+
+/*works*/
+section h2 {
+  font-family: var(--accent-font);
+  font-size: 40px;
+  margin: 24px 0 100px;
+  text-align: center;
+}
+
+.works {
+  padding: 40px 56px 80px;
+  border: 1px solid var(--text-color);
+  position: relative;
+}
+
+.works+.works {
+  margin-top: 160px;
+}
+
+.work-number {
+  position: absolute;
+  top: -80px;
+  left: 10px;
+}
+
+.works-inner {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.works-table {
+  flex: 2;
+}
+
+.td-first {
+  padding: 0;
+}
+
+.table-ul {
+  padding-left: 1em;
+}
+
+.table-ul li {
+  margin-top: 8px;
+}
+
+.work-img {
+  max-width: 100%;
+}
+
+.work-img img {
+  box-shadow: 0px 0px 8px #bbb;
+}
+
+.more {
+  width: 100%;
+  line-height: 2;
+  margin-top: 16px;
+  padding: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: var(--hover_before-color);
+  border-radius: 16px;
+}
+
+.more:hover {
+  background: var(--accent-color);
+  cursor: pointer;
+}
+
+#js-more4:active {
+  animation: roll 0.5s 3;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/*About*/
+#about {
+  padding-bottom: 160px;
+}
+
+.skill-title {
+  margin-left: 180px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.skill-table {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+}
+
+footer {
+  height: 80px;
+  background: var(--accent-color);
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+
+/*戻るボタン*/
+.to-top {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  color: var(--accent-color);
+  font-size: 40px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: none;
+  }
+
+  .wrapper {
+    box-shadow: none;
+  }
+
+  .works-inner {
+    display: block;
+  }
+
+  .works-inner table {
+    margin-top: 32px;
+  }
+
+  .work-img {
+    margin-top: 24px;
+  }
+
+  /*About*/
+  .skill-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .skill-table {
+    display: block;
+  }
+
+  footer {
+    border-radius: 0;
+  }
+}
